@@ -1,9 +1,9 @@
+python
 numpy 
 pandas 
 streamlit
 scikit-learn
 emoji
-UNICODE_EMOJI
 URLExtract
 urlextract
 Preprocessor
