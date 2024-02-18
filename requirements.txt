@@ -8,3 +8,4 @@ urlextract
 Preprocessor
 helper
 matplotlib
+seaborn
