@@ -90,24 +90,6 @@ if uploaded_files is not None:
 
 
 
-        #Emoji
-        st.title("Emoji Used Analysis")
-        col1, col2, = st.columns(2)
-        with col1:
-
-            emoji_df = helper.emoji_founder(selected_user,df)
-            st.dataframe(emoji_df)
-
-        with col2:
-            fig, ax = plt.subplots()
-            ax.barh(emoji_df['Emoji'], emoji_df['Frequency'], color='green')
-            plt.xlabel("Emojis")
-            plt.ylabel("Frequency")
-            plt.xticks(rotation='vertical')
-            st.pyplot(fig)
-
-
-
         #TimeLine of the chat
         st.header("Dayz & Monthly & Yearly  Timeline")
         timeLine = helper.timeline_chat(selected_user,df)
@@ -149,5 +131,21 @@ if uploaded_files is not None:
         fig , ax = plt.subplots()
         ax= sns.heatmap(user_heatmap)
         st.pyplot(fig)
+
+                #Emoji
+        st.title("Emoji Used Analysis")
+        col1, col2, = st.columns(2)
+        with col1:
+
+            emoji_df = helper.emoji_founder(selected_user,df)
+            st.dataframe(emoji_df)
+
+        with col2:
+            fig, ax = plt.subplots()
+            ax.barh(emoji_df['Emoji'], emoji_df['Frequency'], color='green')
+            plt.xlabel("Emojis")
+            plt.ylabel("Frequency")
+            plt.xticks(rotation='vertical')
+            st.pyplot(fig)
 
 
