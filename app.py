@@ -133,19 +133,19 @@ if uploaded_files is not None:
         st.pyplot(fig)
 
                 #Emoji
-        st.title("Emoji Used Analysis")
-        col1, col2, = st.columns(2)
-        with col1:
+        # st.title("Emoji Used Analysis")
+        # col1, col2, = st.columns(2)
+        # with col1:
 
-            emoji_df = helper.emoji_founder(selected_user,df)
-            st.dataframe(emoji_df)
+        #     emoji_df = helper.emoji_founder(selected_user,df)
+        #     st.dataframe(emoji_df)
 
-        with col2:
-            fig, ax = plt.subplots()
-            ax.barh(emoji_df['Emoji'], emoji_df['Frequency'], color='green')
-            plt.xlabel("Emojis")
-            plt.ylabel("Frequency")
-            plt.xticks(rotation='vertical')
-            st.pyplot(fig)
+        # with col2:
+        #     fig, ax = plt.subplots()
+        #     ax.barh(emoji_df['Emoji'], emoji_df['Frequency'], color='green')
+        #     plt.xlabel("Emojis")
+        #     plt.ylabel("Frequency")
+        #     plt.xticks(rotation='vertical')
+        #     st.pyplot(fig)
 
 
